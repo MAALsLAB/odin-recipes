@@ -9,10 +9,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="./js/slideshow.js"></script>
     <title>Odin Recipes</title>
   </head>
 
-  <body>
+  <body onload="showSlides(1)">
     <!-- header -->
     <header>
       <span class="logo">
@@ -38,5 +39,39 @@
         </ul>
       </nav>
     </header>
+    <!-- main -->
+    <main>
+      <!-- Slideshow -->
+      <div class="slideshow">
+        <!-- Full-width images with number and caption -->
+        <div class="mySlides fade">
+          <div class="number-text">1 / 3</div>
+          <img src="./imgs/fried_chicken.webp" alt="fried chicken" />
+          <div class="captio-text">Fried Chicken</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="number-text">2 / 3</div>
+          <img src="./imgs/karaage.webp" alt="karaage" />
+          <div class="captio-text">Karaage</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="number-text">3 / 3</div>
+          <img src="./imgs/teriyaki.webp" alt="teriyaki Shrimp" />
+          <div class="captio-text">Teriyaki Shrimp</div>
+        </div>
+        <!-- Next and Prevoius butons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </main>
   </body>
 </html>
